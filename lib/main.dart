@@ -25,7 +25,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   bool _visible = true;
 
   @override
@@ -56,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ListTile(
-              title: Text('Item 1'),
+              title: Text('Snackbar demo'),
               onTap: () {
                 Navigator.pop(context);                    
                 Navigator.push(context,
