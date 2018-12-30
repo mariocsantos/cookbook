@@ -10,7 +10,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        brightness: Brightness.dark,
+        primaryColor: Colors.lightBlue[800],
+        accentColor: Colors.cyan[600],
+        fontFamily: 'Montserrat',
+        textTheme: TextTheme(
+          headline: TextStyle(
+            fontSize: 72.0,
+            fontWeight: FontWeight.bold
+          ),
+          title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind')
+        )
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page')
     );
@@ -78,14 +89,17 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            _visible = !_visible;
-          });
-        },
-        tooltip: 'Toggle Opacity',
-        child: Icon(Icons.flip)
+      floatingActionButton: Theme(
+        data: Theme.of(context).copyWith(accentColor: Colors.pink[500]),
+        child: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              _visible = !_visible;
+            });
+          },
+          tooltip: 'Toggle Opacity',
+          child: Icon(Icons.flip)
+        )
       ) // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
