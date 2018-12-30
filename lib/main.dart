@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './snackbar_page.dart';
 import './orientation_list.dart';
+import './custom_fonts.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         primaryColor: Colors.lightBlue[800],
         accentColor: Colors.cyan[600],
-        fontFamily: 'Montserrat',
+        fontFamily: 'RobotoMono',
         textTheme: TextTheme(
           headline: TextStyle(
             fontSize: 72.0,
@@ -83,6 +84,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) =>  OrientationList()) 
+                );                 
+              },
+            ),
+            ListTile(
+              title: Text('Custom fonts'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  CustomFontsPage()) 
                 );                 
               },
             ),
