@@ -9,7 +9,8 @@ class CustomFontsPage extends StatelessWidget {
 				child: Text(
 					'A new font', 
 					style: TextStyle(
-						fontFamily: 'Raleway'
+						fontFamily: 'Raleway',
+						fontSize: 24.0
 					),
 				),
 			),

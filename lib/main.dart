@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './snackbar_page.dart';
 import './orientation_list.dart';
 import './custom_fonts.dart';
+import './tabs.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
         primaryColor: Colors.lightBlue[800],
         accentColor: Colors.cyan[600],
         fontFamily: 'RobotoMono',
@@ -94,6 +95,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) =>  CustomFontsPage()) 
+                );                 
+              },
+            ),
+            ListTile(
+              title: Text('Tabs'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  TabsPage()) 
                 );                 
               },
             ),
