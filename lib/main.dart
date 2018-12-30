@@ -3,6 +3,7 @@ import './snackbar_page.dart';
 import './orientation_list.dart';
 import './custom_fonts.dart';
 import './tabs.dart';
+import './custom_form.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'RobotoMono',
         textTheme: TextTheme(
           headline: TextStyle(
-            fontSize: 72.0,
+            fontSize: 16.0,
             fontWeight: FontWeight.bold
           ),
           title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
@@ -105,6 +106,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) =>  TabsPage()) 
+                );                 
+              },
+            ),
+            ListTile(
+              title: Text('Custom form'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  CustomFormPage()) 
                 );                 
               },
             ),
