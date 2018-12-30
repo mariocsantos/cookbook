@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './snackbar_page.dart';
+import './orientation_list.dart';
 
 void main() => runApp(MyApp());
 
@@ -58,15 +59,20 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text('Snackbar demo'),
               onTap: () {
                 Navigator.pop(context);                    
-                Navigator.push(context,
+                Navigator.push(
+                  context,
                   MaterialPageRoute(builder: (context) =>  MySnackbarPage()) 
                 );
               },
             ),
             ListTile(
-              title: Text('Item 2'),
+              title: Text('Orientation list demo'),
               onTap: () {
-                Navigator.pop(context);                  
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  OrientationList()) 
+                );                 
               },
             ),
           ],
