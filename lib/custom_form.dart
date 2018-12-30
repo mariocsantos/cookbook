@@ -36,6 +36,9 @@ class CustomFormState extends State<CustomForm> {
 								return 'Please enter some text';
 							}
 						},
+            decoration: InputDecoration(
+              labelText: 'Enter your username'
+            ),
 					),
 					Padding(
 						padding: const EdgeInsets.symmetric(vertical: 16.0),
