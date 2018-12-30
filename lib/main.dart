@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './snackbar_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page')
     );
   }
 }
@@ -58,6 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text('Item 1'),
               onTap: () {
                 Navigator.pop(context);                    
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) =>  MySnackbarPage()) 
+                );
               },
             ),
             ListTile(
